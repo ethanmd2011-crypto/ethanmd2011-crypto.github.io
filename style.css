@@ -1,92 +1,19 @@
-/* General Page Setup with Modern Blue Abstract Design */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+// Wait until the webpage completely loads before running code
+document.addEventListener("DOMContentLoaded", () => {
     
-    /* Layered blue abstract geometric & gradient pattern */
-    background-color: #0d1b2a;
-    background-image: 
-        radial-gradient(circle at 20% 20%, rgba(0, 180, 216, 0.25) 0%, transparent 40%),
-        radial-gradient(circle at 80% 80%, rgba(114, 9, 183, 0.2) 0%, transparent 40%),
-        repeating-linear-gradient(45deg, rgba(27, 38, 59, 0.5) 0px, rgba(27, 38, 59, 0.5) 2px, transparent 2px, transparent 10px);
-    background-attachment: fixed;
-}
+    // Step 1: Find the elements in the HTML page using their IDs
+    const magicButton = document.getElementById("magicBtn");
+    const magicMessage = document.getElementById("magicMessage");
 
-/* Header Styling: Dark blue glassmorphism effect */
-header {
-    background-color: rgba(13, 27, 42, 0.85);
-    backdrop-filter: blur(10px);
-    color: #ffffff;
-    text-align: center;
-    padding: 2.5rem 1rem;
-    border-bottom: 1px solid rgba(0, 180, 216, 0.3);
-}
-
-/* Main Layout Setup */
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-}
-
-/* Card Container: Glowing blue translucent box */
-.card {
-    background: rgba(27, 38, 59, 0.8);
-    backdrop-filter: blur(12px);
-    padding: 2.5rem;
-    border-radius: 16px;
-    border: 1px solid rgba(0, 180, 216, 0.4);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 180, 216, 0.2);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-}
-
-.card h2 {
-    color: #90e0ef;
-}
-
-/* Button Styling: Electric blue highlight button */
-button {
-    background-color: #00b4d8;
-    color: #001219;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
-}
-
-/* Hover Effect: Brightens and glows on hover */
-button:hover {
-    background-color: #90e0ef;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(144, 224, 239, 0.5);
-}
-
-/* Dynamic Text Style */
-.hidden-message {
-    margin-top: 1.5rem;
-    font-weight: bold;
-    color: #80ffdb;
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: rgba(13, 27, 42, 0.9);
-    color: #e0e1dd;
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(0, 180, 216, 0.2);
-}
+    // Step 2: Add an 'event listener' to detect when the button is clicked
+    magicButton.addEventListener("click", () => {
+        // Step 3: Change the text dynamically when clicked!
+        magicMessage.textContent = "🎉 Congratulations! You triggered your first JavaScript event!";
+        
+        // Optional: Change the button color after clicking
+        magicButton.style.backgroundColor = "#80ffdb";
+        magicButton.style.color = "#001219";
+        magicButton.textContent = "Clicked!";
+    });
+    
+});
