@@ -21,20 +21,22 @@
     <main>
         <section id="homeSection" class="card tab-content active-section">
             <h2>Ethan DeVoll</h2>
-            <p>This is my personal website where I showcase my favorite activities, hobbies, and coding projects!</p>
+            <p>Click on any of my favorite hobbies below to discover something cool!</p>
             
             <div class="hobbies-container">
-                <span class="emoji-item" title="Fish">🐟</span>
-                <span class="emoji-item" title="Fishing Pole">🎣</span>
-                <span class="emoji-item" title="Soccer Ball & Net">⚽ 🥅</span>
-                <span class="emoji-item" title="Basketball Hoop & Net">🏀 🧺</span>
-                <span class="emoji-item" title="Volleyball & Net">🏐 🕸️</span>
-                <span class="emoji-item" title="Boat">🚤</span>
-                <span class="emoji-item" title="Airplane">✈️</span>
-                <span class="emoji-item" title="Mountains">🏔️</span>
-                <span class="emoji-item" title="Beach">🏖️</span>
-                <span class="emoji-item" title="Car">🏎️</span>
+                <span class="emoji-item" data-info="Fish: Love exploring aquatic marine life!">🐟</span>
+                <span class="emoji-item" data-info="Fishing: Nothing beats a quiet day on the water!">🎣</span>
+                <span class="emoji-item" data-info="Soccer: Scoring goals and team play!">⚽ 🥅</span>
+                <span class="emoji-item" data-info="Basketball: Working on jump shots and court vision!">🏀 🧺</span>
+                <span class="emoji-item" data-info="Volleyball: Setting up spikes and digging saves!">🏐 🕸️</span>
+                <span class="emoji-item" data-info="Boating: Cruising out on the lake with friends!">🚤</span>
+                <span class="emoji-item" data-info="Planes: Taking off on exciting new journeys!">✈️</span>
+                <span class="emoji-item" data-info="Mountains: Hiking trails with epic views!">🏔️</span>
+                <span class="emoji-item" data-info="Beach: Relaxing in the sun and waves!">🏖️</span>
+                <span class="emoji-item" data-info="Cars: Fast rides and cool engineering!">🏎️</span>
             </div>
+
+            <div id="emojiInfoBox" class="info-box">Click an icon above to reveal a surprise!</div>
 
             <button id="magicBtn">Click Me for Magic!</button>
             <p id="magicMessage" class="hidden-message"></p>
@@ -45,6 +47,25 @@
             <p class="about-text">
                 My name is Ethan DeVoll. I like to play volleyball, basketball, and soccer. I also enjoy going fishing, boating, and love to travel.
             </p>
+
+            <p class="instruction-text">👇 Click a card to flip open my favorite activities!</p>
+
+            <div class="interest-grid">
+                <div class="interest-card" data-detail="🏐 Volleyball: Great team sport! Favorite position: Hitter/Setter.">
+                    <h3>Sports</h3>
+                    <p>Volleyball, Basketball & Soccer</p>
+                </div>
+                <div class="interest-card" data-detail="🚤 Outdoors: Catching fish and enjoying time on the boat.">
+                    <h3>Outdoors</h3>
+                    <p>Fishing & Boating</p>
+                </div>
+                <div class="interest-card" data-detail="✈️ Adventures: Visiting new places and seeing the world!">
+                    <h3>Travel</h3>
+                    <p>Exploring New Places</p>
+                </div>
+            </div>
+
+            <div id="cardDetailBox" class="info-box">Select an interest card above!</div>
         </section>
     </main>
 
