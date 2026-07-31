@@ -17,13 +17,47 @@ body {
     background-attachment: fixed;
 }
 
-/* Header Styling: Dark blue glassmorphism effect */
+/* Navigation Bar Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: rgba(13, 27, 42, 0.95);
+    padding: 1rem;
+    border-bottom: 1px solid rgba(0, 180, 216, 0.2);
+}
+
+.nav-btn {
+    background-color: transparent;
+    color: #90e0ef;
+    border: 2px solid #00b4d8;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 180, 216, 0.2);
+    transform: none;
+}
+
+/* Active tab style */
+.nav-btn.active {
+    background-color: #00b4d8;
+    color: #001219;
+}
+
+/* Header Styling */
 header {
     background-color: rgba(13, 27, 42, 0.85);
     backdrop-filter: blur(10px);
     color: #ffffff;
     text-align: center;
-    padding: 2.5rem 1rem;
+    padding: 2rem 1rem;
     border-bottom: 1px solid rgba(0, 180, 216, 0.3);
 }
 
@@ -36,7 +70,7 @@ main {
     padding: 2rem;
 }
 
-/* Card Container: Glowing blue translucent box */
+/* Card Container */
 .card {
     background: rgba(27, 38, 59, 0.8);
     backdrop-filter: blur(12px);
@@ -53,6 +87,21 @@ main {
     color: #90e0ef;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e1dd;
+}
+
+/* Tab Display Toggles */
+.hidden-section {
+    display: none;
+}
+
+.active-section {
+    display: block;
 }
 
 /* Hobbies Container & Emoji Styling */
@@ -77,14 +126,13 @@ main {
     cursor: pointer;
 }
 
-/* Emoji Hover Effect: Makes each icon pop when you mouse over it */
 .emoji-item:hover {
     transform: scale(1.25);
     background: rgba(0, 180, 216, 0.25);
 }
 
-/* Button Styling: Electric blue highlight button */
-button {
+/* General Button Styling */
+#magicBtn {
     background-color: #00b4d8;
     color: #001219;
     border: none;
@@ -97,8 +145,7 @@ button {
     box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
 }
 
-/* Hover Effect: Brightens and glows on hover */
-button:hover {
+#magicBtn:hover {
     background-color: #90e0ef;
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(144, 224, 239, 0.5);
