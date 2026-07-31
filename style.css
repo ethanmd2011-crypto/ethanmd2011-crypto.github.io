@@ -1,42 +1,33 @@
-/* General Page Setup with a Blue Forest Gradient Backdrop */
+/* General Page Setup with Modern Blue Abstract Design */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #f0f8ff;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     
-    /* Deep midnight-blue forest linear and radial gradient blend */
-    background: linear-gradient(180deg, #0b1d3a 0%, #1a3a5c 40%, #205072 75%, #2e6f95 100%),
-                radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
-    background-blend-mode: overlay;
+    /* Layered blue abstract geometric & gradient pattern */
+    background-color: #0d1b2a;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0, 180, 216, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(114, 9, 183, 0.2) 0%, transparent 40%),
+        repeating-linear-gradient(45deg, rgba(27, 38, 59, 0.5) 0px, rgba(27, 38, 59, 0.5) 2px, transparent 2px, transparent 10px);
     background-attachment: fixed;
 }
 
-/* Header Styling: Glassmorphism effect over the forest backdrop */
+/* Header Styling: Dark blue glassmorphism effect */
 header {
-    background-color: rgba(10, 25, 47, 0.75);
-    backdrop-filter: blur(8px);
-    color: #e6f1ff;
+    background-color: rgba(13, 27, 42, 0.85);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
     text-align: center;
     padding: 2.5rem 1rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(0, 180, 216, 0.3);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
-    letter-spacing: 1px;
-}
-
-header p {
-    color: #8892b0;
-    margin-top: 0.5rem;
-}
-
-/* Main Layout */
+/* Main Layout Setup */
 main {
     flex: 1;
     display: flex;
@@ -45,63 +36,57 @@ main {
     padding: 2rem;
 }
 
-/* Card Styling: Frosted blue glass effect with glowing border */
+/* Card Container: Glowing blue translucent box */
 .card {
-    background: rgba(15, 32, 67, 0.85);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(100, 255, 218, 0.25);
+    background: rgba(27, 38, 59, 0.8);
+    backdrop-filter: blur(12px);
     padding: 2.5rem;
     border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(0, 180, 216, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 180, 216, 0.2);
     text-align: center;
-    max-width: 420px;
+    max-width: 400px;
     width: 100%;
 }
 
 .card h2 {
-    color: #64ffda;
-    margin-top: 0;
+    color: #90e0ef;
 }
 
-.card p {
-    color: #cbd5e1;
-    line-height: 1.6;
-}
-
-/* Button Styling: Glowing cyan accent */
+/* Button Styling: Electric blue highlight button */
 button {
     background-color: #00b4d8;
-    color: #03045e;
+    color: #001219;
     border: none;
-    padding: 0.85rem 1.75rem;
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.4);
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
 }
 
-/* Hover Effect: Glow brightens on hover */
+/* Hover Effect: Brightens and glows on hover */
 button:hover {
     background-color: #90e0ef;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(144, 224, 239, 0.6);
+    box-shadow: 0 6px 18px rgba(144, 224, 239, 0.5);
 }
 
-/* Dynamic Message Styling */
+/* Dynamic Text Style */
 .hidden-message {
     margin-top: 1.5rem;
     font-weight: bold;
-    color: #64ffda;
+    color: #80ffdb;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    padding: 1.2rem;
-    background-color: rgba(10, 25, 47, 0.85);
-    color: #8892b0;
+    padding: 1rem;
+    background-color: rgba(13, 27, 42, 0.9);
+    color: #e0e1dd;
     font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(0, 180, 216, 0.2);
 }
