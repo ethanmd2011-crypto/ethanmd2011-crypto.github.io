@@ -1,24 +1,42 @@
-/* General Page Setup: Sets default colors and font styles */
+/* General Page Setup with a Blue Forest Gradient Backdrop */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    color: #f0f8ff;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
+    /* Deep midnight-blue forest linear and radial gradient blend */
+    background: linear-gradient(180deg, #0b1d3a 0%, #1a3a5c 40%, #205072 75%, #2e6f95 100%),
+                radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
 }
 
-/* Header Styling: Centered title with a stylish background */
+/* Header Styling: Glassmorphism effect over the forest backdrop */
 header {
-    background-color: #2c3e50;
-    color: #ffffff;
+    background-color: rgba(10, 25, 47, 0.75);
+    backdrop-filter: blur(8px);
+    color: #e6f1ff;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2.5rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Main Layout Setup */
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+header p {
+    color: #8892b0;
+    margin-top: 0.5rem;
+}
+
+/* Main Layout */
 main {
     flex: 1;
     display: flex;
@@ -27,45 +45,63 @@ main {
     padding: 2rem;
 }
 
-/* Card Container: Gives a sleek background box to content */
+/* Card Styling: Frosted blue glass effect with glowing border */
 .card {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: rgba(15, 32, 67, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.25);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     text-align: center;
-    max-width: 400px;
+    max-width: 420px;
     width: 100%;
 }
 
-/* Button Styling: Makes the interactive button pop */
+.card h2 {
+    color: #64ffda;
+    margin-top: 0;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+/* Button Styling: Glowing cyan accent */
 button {
-    background-color: #3498db;
-    color: white;
+    background-color: #00b4d8;
+    color: #03045e;
     border: none;
-    padding: 0.75rem 1.5rem;
+    padding: 0.85rem 1.75rem;
     font-size: 1rem;
-    border-radius: 6px;
+    font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(0, 180, 216, 0.4);
 }
 
-/* Hover Effect: Changes button color when the mouse hovers over it */
+/* Hover Effect: Glow brightens on hover */
 button:hover {
-    background-color: #2980b9;
+    background-color: #90e0ef;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(144, 224, 239, 0.6);
 }
 
-/* Dynamic Text Style: Used by JavaScript when revealing hidden text */
+/* Dynamic Message Styling */
 .hidden-message {
     margin-top: 1.5rem;
     font-weight: bold;
-    color: #27ae60;
+    color: #64ffda;
 }
 
 /* Footer Styling */
 footer {
     text-align: center;
-    padding: 1rem;
-    background-color: #e2e8f0;
+    padding: 1.2rem;
+    background-color: rgba(10, 25, 47, 0.85);
+    color: #8892b0;
     font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
