@@ -1,0 +1,71 @@
+/* General Page Setup: Sets default colors and font styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling: Centered title with a stylish background */
+header {
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+/* Main Layout Setup */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Card Container: Gives a sleek background box to content */
+.card {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Button Styling: Makes the interactive button pop */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect: Changes button color when the mouse hovers over it */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Dynamic Text Style: Used by JavaScript when revealing hidden text */
+.hidden-message {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #e2e8f0;
+    font-size: 0.9rem;
+}
