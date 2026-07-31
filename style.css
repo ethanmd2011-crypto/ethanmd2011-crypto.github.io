@@ -37,15 +37,12 @@ nav {
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: none;
 }
 
 .nav-btn:hover {
     background-color: rgba(0, 180, 216, 0.2);
-    transform: none;
 }
 
-/* Active tab style */
 .nav-btn.active {
     background-color: #00b4d8;
     color: #001219;
@@ -79,7 +76,7 @@ main {
     border: 1px solid rgba(0, 180, 216, 0.4);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 15px rgba(0, 180, 216, 0.2);
     text-align: center;
-    max-width: 450px;
+    max-width: 480px;
     width: 100%;
 }
 
@@ -93,6 +90,12 @@ main {
     font-size: 1.1rem;
     line-height: 1.6;
     color: #e0e1dd;
+}
+
+.instruction-text {
+    font-size: 0.9rem;
+    color: #80ffdb;
+    margin-top: 1rem;
 }
 
 /* Tab Display Toggles */
@@ -110,7 +113,7 @@ main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 1rem 0;
     padding: 1rem;
     background: rgba(13, 27, 42, 0.6);
     border-radius: 12px;
@@ -129,6 +132,54 @@ main {
 .emoji-item:hover {
     transform: scale(1.25);
     background: rgba(0, 180, 216, 0.25);
+}
+
+/* Dynamic Interactive Info Box Styling */
+.info-box {
+    background-color: rgba(0, 180, 216, 0.15);
+    border: 1px dashed #00b4d8;
+    color: #80ffdb;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    min-height: 1.5rem;
+}
+
+/* Interest Cards Grid on About Tab */
+.interest-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1.2rem 0;
+}
+
+.interest-card {
+    background: rgba(13, 27, 42, 0.7);
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.interest-card:hover {
+    background: rgba(0, 180, 216, 0.25);
+    transform: translateX(5px);
+}
+
+.interest-card h3 {
+    margin: 0;
+    color: #90e0ef;
+    font-size: 1.1rem;
+}
+
+.interest-card p {
+    margin: 0.2rem 0 0 0;
+    font-size: 0.9rem;
+    color: #cbd5e1;
 }
 
 /* General Button Styling */
