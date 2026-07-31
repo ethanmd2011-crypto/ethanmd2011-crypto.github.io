@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Step 2: Add an 'event listener' to detect when the button is clicked
     magicButton.addEventListener("click", () => {
         // Step 3: Change the text dynamically when clicked!
-        magicMessage.textContent = "🎉 Congratulations! You triggered your first JavaScript event!";
+        magicMessage.textContent = "🎉 Welcome to Ethan DeVoll's site! Thanks for visiting!";
         
         // Optional: Change the button color after clicking
         magicButton.style.backgroundColor = "#80ffdb";
