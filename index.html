@@ -8,13 +8,18 @@
 </head>
 <body>
 
+    <nav>
+        <button id="homeTab" class="nav-btn active">Home</button>
+        <button id="aboutTab" class="nav-btn">About</button>
+    </nav>
+
     <header>
         <h1>Welcome to Ethan DeVoll's Website!</h1>
         <p>Built from scratch using HTML, CSS, and JavaScript.</p>
     </header>
 
     <main>
-        <section class="card">
+        <section id="homeSection" class="card tab-content active-section">
             <h2>Ethan DeVoll</h2>
             <p>This is my personal website where I showcase my favorite activities, hobbies, and coding projects!</p>
             
@@ -33,6 +38,13 @@
 
             <button id="magicBtn">Click Me for Magic!</button>
             <p id="magicMessage" class="hidden-message"></p>
+        </section>
+
+        <section id="aboutSection" class="card tab-content hidden-section">
+            <h2>About Me</h2>
+            <p class="about-text">
+                My name is Ethan DeVoll. I like to play volleyball, basketball, and soccer. I also enjoy going fishing, boating, and love to travel.
+            </p>
         </section>
     </main>
 
