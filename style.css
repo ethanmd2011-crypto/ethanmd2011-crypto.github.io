@@ -1,4 +1,4 @@
-/* General Page Setup with Modern Blue Abstract Design */
+/* General Page Setup with Blue Theme as Default */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
@@ -8,13 +8,40 @@ body {
     flex-direction: column;
     min-height: 100vh;
     
-    /* Layered blue abstract geometric & gradient pattern */
+    /* Smooth background color transition animation */
+    transition: background-color 0.5s ease;
+    
+    /* Default starting background color (Blue) */
     background-color: #0d1b2a;
     background-image: 
         radial-gradient(circle at 20% 20%, rgba(0, 180, 216, 0.25) 0%, transparent 40%),
         radial-gradient(circle at 80% 80%, rgba(114, 9, 183, 0.2) 0%, transparent 40%),
         repeating-linear-gradient(45deg, rgba(27, 38, 59, 0.5) 0px, rgba(27, 38, 59, 0.5) 2px, transparent 2px, transparent 10px);
     background-attachment: fixed;
+}
+
+/* Dynamic CSS classes triggered by JavaScript for background colors */
+body.bg-red {
+    background-color: #7209b7 !important;
+    background-image: radial-gradient(circle at 50% 50%, #e63946, #900c3f) !important;
+}
+
+body.bg-green {
+    background-color: #2a9d8f !important;
+    background-image: radial-gradient(circle at 50% 50%, #2a9d8f, #114b5f) !important;
+}
+
+body.bg-yellow {
+    background-color: #e9c46a !important;
+    background-image: radial-gradient(circle at 50% 50%, #f4a261, #e76f51) !important;
+}
+
+body.bg-blue {
+    background-color: #0d1b2a !important;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(0, 180, 216, 0.25) 0%, transparent 40%),
+        radial-gradient(circle at 80% 80%, rgba(114, 9, 183, 0.2) 0%, transparent 40%),
+        repeating-linear-gradient(45deg, rgba(27, 38, 59, 0.5) 0px, rgba(27, 38, 59, 0.5) 2px, transparent 2px, transparent 10px) !important;
 }
 
 /* Navigation Bar Styling */
@@ -69,7 +96,7 @@ main {
 
 /* Card Container */
 .card {
-    background: rgba(27, 38, 59, 0.8);
+    background: rgba(27, 38, 59, 0.85);
     backdrop-filter: blur(12px);
     padding: 2.5rem;
     border-radius: 16px;
@@ -93,9 +120,10 @@ main {
 }
 
 .instruction-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #80ffdb;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
 }
 
 /* Tab Display Toggles */
@@ -147,42 +175,93 @@ main {
     min-height: 1.5rem;
 }
 
-/* Interest Cards Grid on About Tab */
-.interest-grid {
+/* 3D Flip Card Container & Animations */
+.flip-grid {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 1.2rem 0;
+    gap: 15px;
+    margin-top: 1rem;
 }
 
-.interest-card {
-    background: rgba(13, 27, 42, 0.7);
-    border: 1px solid rgba(0, 180, 216, 0.3);
-    border-radius: 10px;
-    padding: 0.8rem 1rem;
+.flip-card {
+    background-color: transparent;
+    height: 110px;
+    perspective: 1000px; /* Gives 3D depth effect */
     cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: left;
 }
 
-.interest-card:hover {
-    background: rgba(0, 180, 216, 0.25);
-    transform: translateX(5px);
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
 }
 
-.interest-card h3 {
-    margin: 0;
+/* Class added by JS to activate the 180-degree flip */
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 180, 216, 0.4);
+}
+
+/* Front Side Styling */
+.flip-card-front {
+    background: rgba(13, 27, 42, 0.85);
     color: #90e0ef;
-    font-size: 1.1rem;
 }
 
-.interest-card p {
-    margin: 0.2rem 0 0 0;
+.flip-card-front h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.flip-card-front p {
+    margin: 0.3rem 0;
     font-size: 0.9rem;
     color: #cbd5e1;
 }
 
-/* General Button Styling */
+.flip-hint {
+    font-size: 0.75rem;
+    color: #80ffdb;
+    margin-top: 0.2rem;
+}
+
+/* Back Side Styling */
+.flip-card-back {
+    background: rgba(0, 180, 216, 0.3);
+    color: #ffffff;
+    transform: rotateY(180deg); /* Pre-rotated back side */
+    border-color: #80ffdb;
+}
+
+.flip-card-back h3 {
+    margin: 0 0 0.3rem 0;
+}
+
+.flip-card-back p {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+/* Color Changer Button Styling */
 #magicBtn {
     background-color: #00b4d8;
     color: #001219;
@@ -202,7 +281,7 @@ main {
     box-shadow: 0 6px 18px rgba(144, 224, 239, 0.5);
 }
 
-/* Dynamic Text Style */
+/* Dynamic Message Style */
 .hidden-message {
     margin-top: 1.5rem;
     font-weight: bold;
