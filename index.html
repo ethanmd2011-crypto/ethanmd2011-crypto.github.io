@@ -40,6 +40,25 @@
 
             <button id="magicBtn">Click Me to Change Color!</button>
             <p id="magicMessage" class="hidden-message"></p>
+
+            <div class="game-container">
+                <h3>🐍 Ethan's Snake Mini-Game</h3>
+                <div class="score-board">Score: <span id="snakeScore">0</span></div>
+                <canvas id="snakeCanvas" width="300" height="300"></canvas>
+                
+                <div class="game-controls">
+                    <button id="startSnakeBtn">Start / Restart Game</button>
+                </div>
+                
+                <div class="d-pad">
+                    <button id="upBtn">⬆️</button>
+                    <div>
+                        <button id="leftBtn">⬅️</button>
+                        <button id="downBtn">⬇️</button>
+                        <button id="rightBtn">➡️</button>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="aboutSection" class="card tab-content hidden-section">
@@ -51,3 +70,55 @@
             <p class="instruction-text">👇 Click a card to flip open my favorite activities!</p>
 
             <div class="flip-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Sports</h3>
+                            <p>Volleyball, Basketball & Soccer</p>
+                            <span class="flip-hint">Click to flip 🔄</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>🏐 🏀 ⚽</h3>
+                            <p>I love competitive sports! My favorite volleyball positions are Setter and Backrow.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Outdoors</h3>
+                            <p>Fishing & Boating</p>
+                            <span class="flip-hint">Click to flip 🔄</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>🎣 🚤</h3>
+                            <p>Nothing beats spending time on the lake, catching fish, and enjoying great weather on the boat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Travel</h3>
+                            <p>Exploring New Places</p>
+                            <span class="flip-hint">Click to flip 🔄</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>✈️ 🏔️ 🏖️</h3>
+                            <p>Flying to new destinations, hiking up mountain trails, and relaxing on sandy beaches!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Ethan DeVoll 💻 Hosted on GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
