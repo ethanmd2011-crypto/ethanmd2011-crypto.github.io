@@ -186,7 +186,7 @@ main {
 .flip-card {
     background-color: transparent;
     height: 110px;
-    perspective: 1000px; /* Gives 3D depth effect */
+    perspective: 1000px;
     cursor: pointer;
 }
 
@@ -247,7 +247,7 @@ main {
 .flip-card-back {
     background: rgba(0, 180, 216, 0.3);
     color: #ffffff;
-    transform: rotateY(180deg); /* Pre-rotated back side */
+    transform: rotateY(180deg);
     border-color: #80ffdb;
 }
 
