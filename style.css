@@ -14,25 +14,20 @@ body {
     /* Default starting background color (Blue) */
     background-color: #0d1b2a;
     
-    /* We've updated the background-image to create a subtle mountain range effect */
     background-image: 
-        /* The bottom gradient creates the horizon/earth */
         linear-gradient(to top, rgba(0, 180, 216, 0.4) 0%, rgba(27, 38, 59, 0.8) 20%),
-        /* This radial gradient acts as our mountain shapes on the horizon */
         radial-gradient(circle at 10% 20%, transparent 15%, rgba(0, 0, 0, 0.2) 15%, rgba(0, 0, 0, 0.2) 20%, transparent 20%),
         radial-gradient(circle at 30% 15%, transparent 10%, rgba(0, 0, 0, 0.2) 10%, rgba(0, 0, 0, 0.2) 15%, transparent 15%),
         radial-gradient(circle at 50% 25%, transparent 20%, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 0.2) 25%, transparent 25%),
         radial-gradient(circle at 70% 10%, transparent 12%, rgba(0, 0, 0, 0.2) 12%, rgba(0, 0, 0, 0.2) 17%, transparent 17%),
         radial-gradient(circle at 90% 20%, transparent 18%, rgba(0, 0, 0, 0.2) 18%, rgba(0, 0, 0, 0.2) 23%, transparent 23%),
-        /* This repeating gradient gives a grid/sky effect */
         repeating-linear-gradient(45deg, rgba(27, 38, 59, 0.5) 0px, rgba(27, 38, 59, 0.5) 2px, transparent 2px, transparent 10px);
     
     background-attachment: fixed;
-    background-position: bottom; /* Position the "mountains" at the bottom */
+    background-position: bottom;
 }
 
 /* Dynamic CSS classes triggered by JavaScript for background colors */
-/* We'll modify these a bit to work with the new travel theme while still changing colors */
 body.bg-red {
     background-color: #900c3f !important;
     background-image: linear-gradient(to top, rgba(230, 57, 70, 0.5) 0%, rgba(144, 12, 63, 0.9) 100%) !important;
@@ -215,7 +210,6 @@ main {
     transform-style: preserve-3d;
 }
 
-/* Class added by JS to activate the 180-degree flip */
 .flip-card.is-flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
@@ -236,7 +230,6 @@ main {
     border: 1px solid rgba(0, 180, 216, 0.4);
 }
 
-/* Front Side Styling */
 .flip-card-front {
     background: rgba(13, 27, 42, 0.85);
     color: #90e0ef;
@@ -259,7 +252,6 @@ main {
     margin-top: 0.2rem;
 }
 
-/* Back Side Styling */
 .flip-card-back {
     background: rgba(0, 180, 216, 0.3);
     color: #ffffff;
@@ -297,11 +289,82 @@ main {
     box-shadow: 0 6px 18px rgba(144, 224, 239, 0.5);
 }
 
-/* Dynamic Message Style */
 .hidden-message {
     margin-top: 1.5rem;
     font-weight: bold;
     color: #80ffdb;
+}
+
+/* Snake Mini-Game Styling */
+.game-container {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    background: rgba(13, 27, 42, 0.75);
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    border-radius: 12px;
+}
+
+.game-container h3 {
+    margin: 0 0 0.5rem 0;
+    color: #90e0ef;
+}
+
+.score-board {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #80ffdb;
+    margin-bottom: 0.8rem;
+}
+
+#snakeCanvas {
+    background-color: #0a192f;
+    border: 2px solid #00b4d8;
+    border-radius: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8);
+    display: block;
+    margin: 0 auto;
+}
+
+.game-controls {
+    margin-top: 1rem;
+}
+
+#startSnakeBtn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#startSnakeBtn:hover {
+    background-color: #2ecc71;
+}
+
+/* D-Pad Buttons for Touch/Mobile */
+.d-pad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 1rem;
+}
+
+.d-pad button {
+    background-color: rgba(0, 180, 216, 0.3);
+    color: white;
+    border: 1px solid #00b4d8;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.d-pad button:hover {
+    background-color: #00b4d8;
 }
 
 /* Footer Styling */
