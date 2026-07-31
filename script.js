@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Step 5: Make About Tab 3D Cards Flip on Click
     flipCards.forEach((card) => {
         card.addEventListener("click", () => {
-            // Toggle the 'is-flipped' class to trigger CSS 3D rotation
             card.classList.toggle("is-flipped");
         });
     });
@@ -60,19 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let colorIndex = 0;
 
     magicButton.addEventListener("click", () => {
-        // Remove old background classes
         document.body.classList.remove("bg-red", "bg-green", "bg-yellow", "bg-blue");
 
-        // Get current color name
         const currentColor = colors[colorIndex];
-
-        // Add new color class to body
         document.body.classList.add(`bg-${currentColor}`);
 
-        // Update status message
         magicMessage.textContent = `🎨 Background color changed to ${currentColor.toUpperCase()}!`;
 
-        // Advance to next color
         colorIndex = (colorIndex + 1) % colors.length;
     });
     
