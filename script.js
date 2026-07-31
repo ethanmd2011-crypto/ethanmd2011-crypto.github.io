@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const emojiItems = document.querySelectorAll(".emoji-item");
     const emojiInfoBox = document.getElementById("emojiInfoBox");
 
-    const interestCards = document.querySelectorAll(".interest-card");
-    const cardDetailBox = document.getElementById("cardDetailBox");
+    const flipCards = document.querySelectorAll(".flip-card");
 
     // Step 2: Tab Switching Logic - Home Tab
     homeTab.addEventListener("click", () => {
@@ -43,27 +42,38 @@ document.addEventListener("DOMContentLoaded", () => {
     // Step 4: Make Home Tab Emojis Interactive
     emojiItems.forEach((emoji) => {
         emoji.addEventListener("click", () => {
-            // Retrieve custom info from data-info attribute
             const infoText = emoji.getAttribute("data-info");
             emojiInfoBox.textContent = infoText;
         });
     });
 
-    // Step 5: Make About Tab Interest Cards Interactive
-    interestCards.forEach((card) => {
+    // Step 5: Make About Tab 3D Cards Flip on Click
+    flipCards.forEach((card) => {
         card.addEventListener("click", () => {
-            // Retrieve custom detail from data-detail attribute
-            const detailText = card.getAttribute("data-detail");
-            cardDetailBox.textContent = detailText;
+            // Toggle the 'is-flipped' class to trigger CSS 3D rotation
+            card.classList.toggle("is-flipped");
         });
     });
 
-    // Step 6: Magic Button Event Listener
+    // Step 6: Multi-Click Background Color Changer Logic
+    const colors = ["red", "green", "yellow", "blue"];
+    let colorIndex = 0;
+
     magicButton.addEventListener("click", () => {
-        magicMessage.textContent = "🎉 Welcome to Ethan DeVoll's site! Thanks for visiting!";
-        magicButton.style.backgroundColor = "#80ffdb";
-        magicButton.style.color = "#001219";
-        magicButton.textContent = "Clicked!";
+        // Remove old background classes
+        document.body.classList.remove("bg-red", "bg-green", "bg-yellow", "bg-blue");
+
+        // Get current color name
+        const currentColor = colors[colorIndex];
+
+        // Add new color class to body
+        document.body.classList.add(`bg-${currentColor}`);
+
+        // Update status message
+        magicMessage.textContent = `🎨 Background color changed to ${currentColor.toUpperCase()}!`;
+
+        // Advance to next color
+        colorIndex = (colorIndex + 1) % colors.length;
     });
     
 });
