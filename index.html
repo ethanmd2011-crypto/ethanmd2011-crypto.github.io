@@ -29,7 +29,7 @@
                 <span class="emoji-item" data-info="Soccer: Scoring goals and team play!">⚽ 🥅</span>
                 <span class="emoji-item" data-info="Basketball: Working on jump shots and court vision!">🏀 🧺</span>
                 <span class="emoji-item" data-info="Volleyball: Setting up spikes and digging saves!">🏐 🕸️</span>
-                <span class="emoji-item" data-info="Boating: Cruising out on the lake with friends!">🚤</span>
+                <span class="emoji-item" data-info="Boat: Cruising out on the lake with friends!">🚤</span>
                 <span class="emoji-item" data-info="Planes: Taking off on exciting new journeys!">✈️</span>
                 <span class="emoji-item" data-info="Mountains: Hiking trails with epic views!">🏔️</span>
                 <span class="emoji-item" data-info="Beach: Relaxing in the sun and waves!">🏖️</span>
@@ -38,7 +38,7 @@
 
             <div id="emojiInfoBox" class="info-box">Click an icon above to reveal a surprise!</div>
 
-            <button id="magicBtn">Click Me for Magic!</button>
+            <button id="magicBtn">Click Me to Change Color!</button>
             <p id="magicMessage" class="hidden-message"></p>
         </section>
 
@@ -50,22 +50,49 @@
 
             <p class="instruction-text">👇 Click a card to flip open my favorite activities!</p>
 
-            <div class="interest-grid">
-                <div class="interest-card" data-detail="🏐 Volleyball: Great team sport! Favorite position: Hitter/Setter.">
-                    <h3>Sports</h3>
-                    <p>Volleyball, Basketball & Soccer</p>
+            <div class="flip-grid">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Sports</h3>
+                            <p>Volleyball, Basketball & Soccer</p>
+                            <span class="flip-hint">Click to flip 🔄</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>🏐 🏀 ⚽</h3>
+                            <p>I love competitive sports! Setting up volleyball spikes, hitting jump shots, and scoring goals on the field.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="interest-card" data-detail="🚤 Outdoors: Catching fish and enjoying time on the boat.">
-                    <h3>Outdoors</h3>
-                    <p>Fishing & Boating</p>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Outdoors</h3>
+                            <p>Fishing & Boating</p>
+                            <span class="flip-hint">Click to flip 🔄</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>🎣 🚤</h3>
+                            <p>Nothing beats spending time on the lake, catching fish, and enjoying great weather on the boat.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="interest-card" data-detail="✈️ Adventures: Visiting new places and seeing the world!">
-                    <h3>Travel</h3>
-                    <p>Exploring New Places</p>
+
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Travel</h3>
+                            <p>Exploring New Places</p>
+                            <span class="flip-hint">Click to flip 🔄</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>✈️ 🏔️ 🏖️</h3>
+                            <p>Flying to new destinations, hiking up mountain trails, and relaxing on sandy beaches!</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div id="cardDetailBox" class="info-box">Select an interest card above!</div>
         </section>
     </main>
 
@@ -76,3 +103,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+         
